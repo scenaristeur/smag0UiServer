@@ -11,3 +11,8 @@ server.listen(port, function () {
 
 // Routing
 app.use(express.static(__dirname + '/public'));
+
+//Socket.IO
+  io.on('connect', function(){});
+  io.on('event', function(data){});
+  io.on('disconnect', function(){});
