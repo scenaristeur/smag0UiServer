@@ -4,7 +4,8 @@
 		<!-- GENERAL LIBRAIRIES -->       
 		<script src="/socket.io/socket.io.js"></script>
 		<script>
-			var socket = io('http://localhost:3000');
+			var host = window.document.location.host;
+			var socket = io(host);
 			socket.on('connect', function(){});
 			socket.on('event', function(data){});
 			socket.on('disconnect', function(){});
