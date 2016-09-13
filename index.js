@@ -13,6 +13,12 @@ server.listen(port, function () {
 app.use(express.static(__dirname + '/public'));
 
 //Socket.IO
-  io.on('connect', function(){});
-  io.on('event', function(data){});
-  io.on('disconnect', function(){});
+io.on('connect', function(){
+	console.log("connecte");
+});
+io.on('event', function(data){
+	console.log(data);
+});
+io.on('disconnect', function(){
+	console.log("deconnecte");
+});
